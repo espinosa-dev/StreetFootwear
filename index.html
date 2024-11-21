@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+  <title>SF Sports | Tienda online de zapatillas y ropa.</title>
+  <script src="script.js" defer></script>
+  <link rel="icon" href="./img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Barra de Navegación -->
+  <header>
+    <nav class="navbar">
+      <span class="menu-btn material-symbols-rounded">menu</span>
+      <a href="index.html" class="logo">
+        <img src="./img/logo.png" alt="Logo">
+      </a>
+      <ul class="links show-menu">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="./pages/man.html">Hombre</a></li>
+        <li><a href="./pages/women.html">Mujer</a></li>
+        <li><a href="./pages/accesories.html">Accesorios</a></li>
+        <li><a href="./pages/about-us.html">Sobre Nosotros</a></li>
+        <li><a href="./pages/contact.html">Contacto</a></li>
+      </ul>
+      <button class="login-btn">Inicia Sesión</button>
+    </nav>
+  </header>
+  <!-- Popup de Login -->
+  <div class="blur-bg-overlay"></div>
+  <div class="form-popup">
+    <span class="close-btn material-symbols-rounded">close</span>
+    <div class="form-box login">
+      <div class="form-details">
+        <h2>Bienvenido de nuevo!</h2>
+        <p><b>Inicia sesión para acceder a tus pedidos, favoritos, y más.</b></p>
+      </div>
+      <div class="form-content">
+        <h2>Inicia Sesión</h2>
+        <form action="#">
+          <div class="input-form">
+            <input type="text" required>
+            <label>Email</label>
+          </div>
+          <div class="input-form">
+            <input type="password" required>
+            <label>Contraseña</label>
+          </div>
+          <a href="#" class="forgot-pass">Contraseña olvidada?</a>
+          <button type="submit">Inicia Sesión</button>
+        </form>
+        <div class="bottom-link">
+          No tienes cuenta?
+          <a href="#" id="signup-link">Regístrate</a>
+        </div>
+      </div>
+    </div>
+    <div class="form-box signup">
+      <div class="form-details">
+        <h2>Crea una cuenta</h2>
+        <p><b>Para formar parte de nuestra comunidad, por favor regístrate utilizando tu información personal.</b></p>
+      </div>
+      <div class="form-content">
+        <h2>Registrate</h2>
+        <form action="#">
+          <div class="input-form">
+            <input type="text" required>
+            <label>Introduce tu email</label>
+          </div>
+          <div class="input-form">
+            <input type="password" required>
+            <label>Crea una contraseña</label>
+          </div>
+          <div class="policy-text">
+            <input type="checkbox" id="policy" required>
+            <label for="policy">Acepto los <a href="#">términos y condiciones</a></label>
+          </div>
+          <button type="submit">Registrate</button>
+        </form>
+        <div class="bottom-link">
+          Ya tienes una cuenta?
+          <a href="#" id="login-link">Inicia Sesión</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inicio -->
+  <section class="inicio">
+    <div class="inicio-content">
+      <h1>Explora Nuestra Nueva Coleccion</h1>
+      <p>Encuentra las mejores prendas y accesorios deportivos.</p>
+      <br><br>
+      <a href="./pages/man.html" class="btn-comprar">Compra Ahora</a>
+    </div>
+  </section>
+
+  <!-- Zona de partners o colaboradores nuestros. -->
+  <div class="partners">
+    <h2>Las marcas que confian en nosotros.</h2>
+    <div class="partners-slider">
+      <a href="https://www.nike.com/es/" target="_blank"><img src="./img/nike-logo.png" alt="Nike Logo"></a>
+      <a href="https://www.adidas.es/" target="_blank"><img src="./img/adidas-logo.png" alt="Adidas Logo"></a>
+      <a href="https://www.thenorthface.es/es-es" target="_blank"><img src="./img/the-north-face-logo.png" alt="The North Face Logo"></a>
+    </div>
+  </div>
+
+  <!-- Promociones destacadas -->
+    <div class="promotions">
+      <h2>Promociones Destacadas</h2>
+      <div class="promotions-slider">
+        <div class="promotion">
+          <img src="./img/today-discounts.png" alt="Promoción 1">
+          <h3>Descuento especial</h3>
+          <p>Conoce la oferta especial de hoy.</p>
+          <a href="./pages/man.html"><button class="promotion-btn">Ver</button></a>
+        </div>
+        <div class="promotion">
+          <img src="./img/new-clothes.png" alt="Promoción 2">
+          <h3>Nuevos productos</h3>
+          <p>Nuevos productos y accesorios.</p>
+          <a href="./pages/man.html"><button class="promotion-btn">Ver</button></a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.promotion-btn').forEach(card => {
+        const video = card.querySelector('.promotion-btn');
+        video.pause();
+        card.addEventListener('mouseenter', function() {
+          video.play();
+        });
+        card.addEventListener('mouseleave', function() {
+          video.pause();
+          video.currentTime = 0;
+        });
+      });
+    </script>
+
+  <!-- Botón para volver arriba -->
+  <button class="back-to-top" onclick="scrollToTop()"><span class="material-symbols-rounded">arrow_upward</span></button>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo de la tienda" class="footer-logo">
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="#">Hombre</a></li>
+            <li><a href="#">Mujer</a></li>
+            <li><a href="#">Accesorios deportivos</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Información</h4>
+          <ul>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Política de devoluciones</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Redes Sociales</h4>
+          <div class="footer-bottom">
+            <p>&copy; 2024 Todos los derechos reservados. | Creado con <i class="fas fa-heart"></i> HTML y CSS</p>
+            <div class="social-icons">
+              <a href="https://github.com/espinosa-dev" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/espinosa.dev/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/%C3%A1lvaro-espinosa-b84555316/" target="_blank"><i
+                  class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/%C3%A1lvaro-espinosa-b84555316/" target="_blank"><i
+                  class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

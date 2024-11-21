@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+    <title>SF Sports | Tienda online de zapatillas y ropa.</title>
+    <script src="../script.js" defer></script>
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <header>
+        <nav class="navbar">
+            <span class="menu-btn material-symbols-rounded">menu</span>
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.png" alt="Logo">
+            </a>
+            <ul class="links show-menu">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/man.html">Hombre</a></li>
+                <li><a href="../pages/women.html">Mujer</a></li>
+                <li><a href="../pages/accesories.html">Accesorios</a></li>
+                <li><a href="../pages/about-us.html">Sobre Nosotros</a></li>
+                <li><a href="../pages/contact.html">Contacto</a></li>
+            </ul>
+            <a href="./compra.html"><button class="login-btn">Cart</button></a>
+        </nav>
+    </header>
+
+
+
+    <div class="container-clothes">
+        <aside class="sidebar">
+            <h2>Categorías</h2>
+            <br>
+            <ul>
+                <li>
+                    <input type="checkbox" id="pantalones" onclick="filterProducts(this)"> Pantalones
+                </li>
+                <li>
+                    <input type="checkbox" id="camisetas" onclick="filterProducts(this)"> Camisetas
+                </li>
+                <li>
+                    <input type="checkbox" id="chaquetas" onclick="filterProducts(this)"> Chaquetas
+                </li>
+                <li>
+                    <input type="checkbox" id="zapatillas" onclick="filterProducts(this)"> Zapatillas
+                </li>
+                <li>
+                    <input type="checkbox" id="todos" onclick="filterProducts(this)">Todos
+                </li>
+            </ul>
+        </aside>
+
+        <main class="product-list" id="product-list">
+            <div class="product" data-category="pantalones">
+                <img src="../img/pantalonm.png" alt="Pantalón">
+                <p class="product-name">Pantalón Hombre</p>
+                <p class="price">€25.00</p>
+                <div class="button-container">
+                    <a href="./compra-pantalonm.html"><button class="buy-button">Comprar</button></a>
+                </div>
+            </div>
+            <div class="product" data-category="camisetas" data-discount="true">
+                <img src="../img/camisetam.png" alt="Camiseta">
+                <p class="product-name">Camiseta Hombre</p>
+                <p class="price discounted">€25.00 <span class="original-price">€30.00</span></p>
+                <div class="button-container">
+                    <a href="./compra-camisetam.html"><button class="buy-button">Comprar</button></a>
+                </div>
+            </div>
+            <div class="product" data-category="chaquetas" data-discount="true">
+                <img src="../img/chaquetam.png" alt="Chaquetas">
+                <p class="product-name">Chaquetas Hombre</p>
+                <p class="price discounted">€40.00 <span class="original-price">€50.00</span></p>
+                <div class="button-container">
+                    <a href="./compra-chaquetam.html"><button class="buy-button">Comprar</button></a>
+                </div>
+            </div>
+            <div class="product" data-category="zapatillas" data-discount="true">
+                <img src="../img/zapatillam.png" alt="Zapatillas">
+                <p class="product-name">Zapatillas Hombre</p>
+                <p class="price">€30.00</p>
+                <div class="button-container">
+                    <a href="./compra-zapatillam.html"><button class="buy-button">Comprar</button></a>
+                </div>
+            </div>
+    </div>
+    <!-- Footer -->
+
+     <footer>
+        <div class="container">
+          <div class="logo">
+            <img src="../img/logo.png" alt="Logo de la tienda" class="footer-logo">
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Productos</h4>
+              <ul>
+                <li><a href="#">Hombre</a></li>
+                <li><a href="#">Mujer</a></li>
+                <li><a href="#">Accesorios deportivos</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Información</h4>
+              <ul>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Política de devoluciones</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Redes Sociales</h4>
+              <div class="footer-bottom">
+                <p>&copy; 2024 Todos los derechos reservados.  | Creado con <i class="fas fa-heart"></i> HTML y CSS</p>
+                <div class="social-icons">
+                  <a href="https://github.com/espinosa-dev" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://www.instagram.com/espinosa.dev/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/%C3%A1lvaro-espinosa-b84555316/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.linkedin.com/in/%C3%A1lvaro-espinosa-b84555316/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </footer> 
+</body>
+</html>
