@@ -1,0 +1,176 @@
+<!-- Quiero que hagas un formluario para el contacto de la web que debe contener 3 apartados: 1. Email 2. Asunto 3. Mensaje y un boton para enviar. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+  <link rel="icon" href="../img/logo.png" type="image/x-icon">
+</head>
+<body>
+  <!-- Barra de Navegación -->
+  <header>
+    <nav class="navbar">
+          <span class="menu-btn material-symbols-rounded">menu</span>
+          <a href="../index.html" class="logo">
+              <img src="../img/logo.png" alt="Logo">
+          </a>
+          <ul class="links show-menu">
+              <span class="close-btn material-symbols-rounded">close</span>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="../pages/man.html">Hombre</a></li>
+              <li><a href="../pages/women.html">Mujer</a></li>
+              <li><a href="../pages/accesories.html">Accesorios</a></li>
+              <li><a href="../pages/about-us.html">Sobre Nosotros</a></li>
+              <li><a href="../pages/contact.html">Contacto</a></li>
+          </ul>
+          <button class="login-btn">Inicia Sesión</button>
+    </nav>
+  </header>
+
+  <!-- Popup de Login -->
+  <div class="blur-bg-overlay"></div>
+  <div class="form-popup">
+     <span class="close-btn material-symbols-rounded">close</span>
+     <div class="form-box login">
+         <div class="form-details">
+             <h2>Bienvenido de nuevo!</h2>
+             <p><b>Inicia sesión para acceder a tus pedidos, favoritos, y más.</b></p>
+         </div>
+         <div class="form-content">
+             <h2>Inicia Sesión</h2>
+             <form action="#">
+                 <div class="input-form">
+                     <input type="text" required>
+                     <label>Email</label>
+                 </div>
+                 <div class="input-form">
+                     <input type="password" required>
+                     <label>Contraseña</label>
+                 </div>
+                 <a href="#" class="forgot-pass">Contraseña olvidada?</a>
+                 <button type="submit">Inicia Sesión</button>
+             </form>
+             <div class="bottom-link">
+                 No tienes cuenta?
+                 <a href="#" id="signup-link">Regístrate</a>
+             </div>
+         </div>
+     </div>
+     <div class="form-box signup">
+         <div class="form-details">
+             <h2>Crea una cuenta</h2>
+             <p><b>Para formar parte de nuestra comunidad, por favor regístrate utilizando tu información personal.</b></p>
+         </div>
+         <div class="form-content">
+             <h2>Registrate</h2>
+             <form action="#">
+                 <div class="input-form">
+                     <input type="text" required>
+                     <label>Introduce tu email</label>
+                 </div>
+                 <div class="input-form">
+                     <input type="password" required>
+                     <label>Crea una contraseña</label>
+                 </div>
+                 <div class="policy-text">
+                     <input type="checkbox" id="policy" required>
+                     <label for="policy">Acepto los <a href="#">términos y condiciones</a></label>
+                 </div>
+                 <button type="submit">Registrate</button>
+             </form>
+             <div class="bottom-link">
+                 Ya tienes una cuenta?
+                 <a href="#" id="login-link">Inicia Sesión</a>
+             </div>
+         </div>
+     </div>
+  </div>
+
+
+
+<!-- Formulario de Contacto -->
+<section class="contact-form-section">
+  <h1>Formulario de Contacto</h1>
+  <br>
+  <form action="" class="contact-form">
+    <div class="input-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    
+    <div class="input-group">
+      <label for="asunto">Asunto:</label>
+      <input type="text" id="asunto" name="asunto" required />
+    </div>
+    
+    <div class="input-group">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+    </div>
+    
+    <div class="input-group">
+      <input type="submit" value="Enviar" class="submit-btn" />
+    </div>
+  </form>
+</section>
+
+
+
+
+
+<!-- Footer -->
+
+<footer>
+  <div class="container">
+    <div class="logo">
+      <img src="../img/logo.png" alt="Logo de la tienda" class="footer-logo">
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#">Hombre</a></li>
+          <li><a href="#">Mujer</a></li>
+          <li><a href="#">Accesorios deportivos</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Información</h4>
+        <ul>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Política de devoluciones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Redes Sociales</h4>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Todos los derechos reservados.  | Creado con <i class="fas fa-heart"></i> HTML y CSS</p>
+          <div class="social-icons">
+            <a href="https://github.com/espinosa-dev" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/espinosa.dev/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/%C3%A1lvaro-espinosa-b84555316/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/%C3%A1lvaro-espinosa-b84555316/" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer> 
+</body>
+</html>
+
+
+
+
